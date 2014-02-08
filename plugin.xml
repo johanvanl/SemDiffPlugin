@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SemDiffPlugin"
+            id="SemDiffPlugin">
+      </category>
+      <view
+            category="SemDiffPlugin"
+            class="za.ac.sun.cs.semdiffplugin.views.gitbrowser.GitBrowser"
+            icon="icons/browser.gif"
+            id="views.GitBrowser"
+            name="DiffGitBrowser"
+            restorable="true">
+      </view>
+      <view
+            category="SemDiffPlugin"
+            class="za.ac.sun.cs.semdiffplugin.views.diffview.DiffViews"
+            icon="icons/semdiffplugin.gif"
+            id="views.TextViews"
+            name="DiffView"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="za.ac.sun.cs.semdiffplugin.preferences.SemDiffPreferencePage"
+            id="za.ac.sun.cs.semdiffplugin.preferences.SemDiffPreferencePage"
+            name="SemDiffPlugin">
+      </page>
+   </extension>
+
+</plugin>
